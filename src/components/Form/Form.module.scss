@@ -1,0 +1,147 @@
+.form,
+.formArt {
+  display: flex;
+  width: 384px;
+  margin-top: 33px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 32px;
+  background: #ffffff;
+  /* Grey / grey-5 */
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  box-shadow: 0px 22px 106px rgba(0, 0, 0, 0.07), 0px 9.19107px 44.2843px rgba(0, 0, 0, 0.0503198),
+    0px 4.91399px 23.6765px rgba(0, 0, 0, 0.0417275), 0px 2.75474px 13.2728px rgba(0, 0, 0, 0.035),
+    0px 1.46302px 7.04911px rgba(0, 0, 0, 0.0282725),
+    0px 0.608796px 2.93329px rgba(0, 0, 0, 0.0196802);
+  border-radius: 6px;
+
+  .title {
+    width: 100%;
+    height: 28px;
+    margin-bottom: 21px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    text-align: center;
+    /* Grey / grey-9 */
+    color: #262626;
+  }
+
+  .wrapper {
+    width: 100%;
+
+    .button {
+      // width: 100%;
+      width: 319px;
+      height: 40px;
+      margin: 8px 0;
+      background: #1890ff;
+      border-radius: 4px;
+      border: none;
+
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    .link {
+      display: block;
+      /* width: 319px; */
+      width: 100%;
+      height: 20px;
+    }
+
+    .link,
+    .span {
+      line-height: 20px;
+      text-align: center;
+      color: #8c8c8c;
+    }
+
+    .span {
+      color: #1890ff;
+    }
+  }
+}
+
+.formArt {
+  width: 938px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 12px;
+
+  .label,
+  .labelCheckbox {
+    margin: 2px 0px;
+    font-size: 14px;
+    color: #262626;
+  }
+
+  .labelCheckbox {
+    display: flex;
+    height: 44px;
+    margin-left: 24px;
+    margin-top: 29px;
+    margin-bottom: 13px;
+  }
+
+  .labelCheckbox::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 0px;
+    top: -10px;
+    left: 0px;
+    /* Grey / grey-4 */
+    border: 1px solid #e8e8e8;
+  }
+
+  .error,
+  .inputText,
+  .inputCheckbox,
+  .textarea {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+
+    background: #ffffff;
+    /* Grey / grey-5 */
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .error {
+    border: 1px solid #f5222d;
+  }
+
+  .textarea {
+    min-height: 168px;
+  }
+
+  .errorMassage {
+    color: #f5222d;
+  }
+
+  .inputCheckbox {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: #1890ff;
+    /* Daybreak Blue / blue-6 */
+    border: 1px solid #1890ff;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+}

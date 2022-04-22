@@ -1,0 +1,13 @@
+/.git
+/.vscode
+node_modules
+build
+
+dist
+coverage
+tmp
+nginx
+
+package-lock.json
+package.json
+yarn.lock

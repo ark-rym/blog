@@ -1,0 +1,23 @@
+export const GET_ARTICLES = 'GET_ARTICLES'
+export const LOADING_ARTICLES = 'LOADING_ARTICLES'
+
+export const GET_FULL_ARTICLE = 'GET_FULL_ARTICLE'
+export const LOADING_ARTICLE = 'LOADING_ARTICLE'
+
+export const ERROR = 'ERROR'
+export const OTHER_ERRORS = 'OTHER_ERRORS'
+
+export const SET_NEW_USER = 'SET_NEW_USER'
+export const LOGIN_USER = 'LOGIN_USER'
+export const LOGOUT_USER = 'LOGOUT_USER'
+export const EDIT_USER = 'EDIT_USER'
+
+export const LOADING_USER = 'LOADING_USER'
+export const OTHER_ERRORS_USER = 'OTHER_ERRORS_USER'
+export const ERROR_USER = 'ERROR_USER'
+
+export const CREATE_ARTICLE = 'CREATE_ARTICLE'
+export const DELETE_ARTICLE = 'DELETE_ARTICLE'
+export const LIKE_ARTICLE = 'LIKE_ARTICLE'
+
+export const LOADING = 'LOADING'

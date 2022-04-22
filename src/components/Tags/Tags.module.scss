@@ -1,0 +1,37 @@
+.li {
+  list-style-type: none;
+}
+
+.input,
+.buttonDel,
+.buttonAdd {
+  width: 300px;
+  padding: 8px 12px;
+
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+.input {
+  width: 300px;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid #d9d9d9;
+}
+
+.buttonDel {
+  width: 120px;
+  color: rgba(245, 34, 45, 1);
+  border: 1px solid #f5222d;
+}
+
+.buttonAdd {
+  width: 130px;
+  color: rgba(24, 144, 255, 1);
+  border: 1px solid #1890ff;
+}
