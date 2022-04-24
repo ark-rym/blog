@@ -87,12 +87,18 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         isDeleted: true,
       }
-    case LIKE_ARTICLE:
-      const index = state.articles.findIndex((item) => item.slug === action.payload.slug)
-      state.articles[index] = action.payload
+    case LIKE_ARTICLE: {
+      const idx = state.articles.findIndex((item) => item.slug === action.payload.article.slug)
+      const newArr = [
+        ...state.articles.slice(0, idx),
+        action.payload.article,
+        ...state.articles.slice(idx + 1),
+      ]
       return {
         ...state,
+        articles: newArr,
       }
+    }
     case ERROR:
       return {
         ...state,

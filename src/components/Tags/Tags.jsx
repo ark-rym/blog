@@ -17,7 +17,9 @@ const Tags = ({ control }) => {
             name={`tagList.${index}.name`}
             control={control}
             defaultValue={item.name}
-            render={({ field }) => <input {...field} placeholder="Tag" type="text" className={style.input} />}
+            render={({ field }) => (
+              <input {...field} placeholder="Tag" type="text" className={style.input} />
+            )}
           />
           <button
             type="button"

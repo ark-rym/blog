@@ -18,12 +18,14 @@ const Article = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const { isAuth, token, fullArticle, isDeleted } = useSelector(({ isAuth, token, fullArticle, isDeleted }) => ({
-    isAuth,
-    token,
-    fullArticle,
-    isDeleted,
-  }))
+  const { isAuth, token, fullArticle, isDeleted } = useSelector(
+    ({ isAuth, token, fullArticle, isDeleted }) => ({
+      isAuth,
+      token,
+      fullArticle,
+      isDeleted,
+    })
+  )
 
   useEffect(() => {
     if (isAuth && !isDeleted) {

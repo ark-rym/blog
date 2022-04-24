@@ -82,7 +82,9 @@ const Login = () => {
               />
             )}
           />
-          <div>{errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}</div>
+          <div>
+            {errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -102,7 +104,11 @@ const Login = () => {
               />
             )}
           />
-          <div>{errors.password && <span className={style.errorMassage}>{errors.password.message}</span>}</div>
+          <div>
+            {errors.password && (
+              <span className={style.errorMassage}>{errors.password.message}</span>
+            )}
+          </div>
         </div>
 
         {errors && errors.email && errors.email.type === 'server' && (

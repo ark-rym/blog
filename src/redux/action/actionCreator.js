@@ -26,7 +26,9 @@ export const getArticles =
       dispatch({
         type: LOADING_ARTICLES,
       })
-      const result = await fetch(`https://kata.academy:8021/api/articles?limit=5&offset=${(page - 1) * 5}`)
+      const result = await fetch(
+        `https://kata.academy:8021/api/articles?limit=5&offset=${(page - 1) * 5}`
+      )
       const resData = await result.json()
       if (result.ok) {
         dispatch({
@@ -81,6 +83,7 @@ export const likeArticle = (token, slug, like) => async (dispatch) => {
     })
 
     const resData = await result.json()
+
     if (result.ok) {
       dispatch({
         type: LIKE_ARTICLE,

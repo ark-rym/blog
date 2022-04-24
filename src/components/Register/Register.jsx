@@ -89,7 +89,11 @@ const Register = () => {
               />
             )}
           />
-          <div>{errors.username && <span className={style.errorMassage}>{errors.username.message}</span>}</div>
+          <div>
+            {errors.username && (
+              <span className={style.errorMassage}>{errors.username.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -109,7 +113,9 @@ const Register = () => {
               />
             )}
           />
-          <div>{errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}</div>
+          <div>
+            {errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -129,7 +135,11 @@ const Register = () => {
               />
             )}
           />
-          <div>{errors.password && <span className={style.errorMassage}>{errors.password.message}</span>}</div>
+          <div>
+            {errors.password && (
+              <span className={style.errorMassage}>{errors.password.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -149,7 +159,11 @@ const Register = () => {
               />
             )}
           />
-          <div>{errors.password2 && <span className={style.errorMassage}>{errors.password2.message}</span>}</div>
+          <div>
+            {errors.password2 && (
+              <span className={style.errorMassage}>{errors.password2.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>

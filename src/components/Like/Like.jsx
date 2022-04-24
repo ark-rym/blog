@@ -14,24 +14,32 @@ const Like = ({ slug, favorited, favoritesCount }) => {
   }))
 
   const [like, setLike] = useState(favorited)
-  const [likeCount, setLikeCount] = useState(favoritesCount)
 
   useEffect(() => {
     setLike(favorited)
-    setLikeCount(favoritesCount)
-  }, [favorited, favoritesCount])
+  }, [favorited])
 
   const onChange = () => {
     dispatch(likeArticle(token, slug, like))
     setLike((prev) => !prev)
-    setLikeCount((prev) => (like ? prev - 1 : prev + 1))
   }
 
   return (
     <label>
-      <input type="checkbox" name="like" disabled={!isAuth} checked={like && isAuth} onChange={onChange} />
-      {!like ? <HeartOutlined className={style.heart} /> : <HeartFilled className={style.heart} />}
-      {likeCount || null}
+      <input
+        type="checkbox"
+        name="like"
+        disabled={!isAuth}
+        checked={like && isAuth}
+        onChange={onChange}
+        className={style.like}
+      />
+      {!favorited ? (
+        <HeartOutlined className={style.heart} />
+      ) : (
+        <HeartFilled className={style.heart} />
+      )}
+      {favoritesCount || null}
     </label>
   )
 }

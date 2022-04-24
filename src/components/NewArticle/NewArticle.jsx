@@ -14,12 +14,14 @@ const NewArticle = () => {
   const navigate = useNavigate()
   const { slug, edit } = useParams()
 
-  const { isAuth, token, fullArticle, error } = useSelector(({ isAuth, token, fullArticle, error }) => ({
-    isAuth,
-    token,
-    fullArticle,
-    error,
-  }))
+  const { isAuth, token, fullArticle, error } = useSelector(
+    ({ isAuth, token, fullArticle, error }) => ({
+      isAuth,
+      token,
+      fullArticle,
+      error,
+    })
+  )
 
   const {
     handleSubmit,
@@ -72,7 +74,9 @@ const NewArticle = () => {
               />
             )}
           />
-          <div>{errors.title && <span className={style.errorMassage}>{errors.title.message}</span>}</div>
+          <div>
+            {errors.title && <span className={style.errorMassage}>{errors.title.message}</span>}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -92,7 +96,11 @@ const NewArticle = () => {
               />
             )}
           />
-          <div>{errors.description && <span className={style.errorMassage}>{errors.description.message}</span>}</div>
+          <div>
+            {errors.description && (
+              <span className={style.errorMassage}>{errors.description.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -111,7 +119,11 @@ const NewArticle = () => {
               />
             )}
           />
-          <div>{errors.textarea && <span className={style.errorMassage}>{errors.textarea.message}</span>}</div>
+          <div>
+            {errors.textarea && (
+              <span className={style.errorMassage}>{errors.textarea.message}</span>
+            )}
+          </div>
         </div>
 
         <div>

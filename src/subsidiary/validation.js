@@ -32,7 +32,10 @@ export const signUpValidation = yup.object().shape({
 
 export const editProfileValidation = yup.object().shape(
   {
-    username: yup.string().min(3, 'Must be 3 characters or more').max(20, 'Must be 20 characters or less'),
+    username: yup
+      .string()
+      .min(3, 'Must be 3 characters or more')
+      .max(20, 'Must be 20 characters or less'),
     email: yup.string().email('Invalid email address'),
     password: yup
       .string()
@@ -40,7 +43,8 @@ export const editProfileValidation = yup.object().shape(
       .notRequired()
       .when('password', {
         is: (value) => value?.length,
-        then: (rule) => rule.min(6, 'Must be 6 characters or more').max(40, 'Must be 40 characters or less'),
+        then: (rule) =>
+          rule.min(6, 'Must be 6 characters or more').max(40, 'Must be 40 characters or less'),
       }),
     image: yup
       .string()
@@ -48,7 +52,8 @@ export const editProfileValidation = yup.object().shape(
       .notRequired()
       .when('image', {
         is: (value) => value?.length,
-        then: (rule) => rule.url('Invalid URL').matches(/\.(jpg|jpeg|png|webp|bmp|avif|gif|svg)$/, 'Invalid URL'),
+        then: (rule) =>
+          rule.url('Invalid URL').matches(/\.(jpg|jpeg|png|webp|bmp|avif|gif|svg)$/, 'Invalid URL'),
       }),
   },
   [

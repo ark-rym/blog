@@ -14,12 +14,14 @@ const Profile = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const { error, isAuth, loadingUser, token } = useSelector(({ error, isAuth, loadingUser, token }) => ({
-    error,
-    isAuth,
-    loadingUser,
-    token,
-  }))
+  const { error, isAuth, loadingUser, token } = useSelector(
+    ({ error, isAuth, loadingUser, token }) => ({
+      error,
+      isAuth,
+      loadingUser,
+      token,
+    })
+  )
 
   const {
     handleSubmit,
@@ -85,7 +87,11 @@ const Profile = () => {
               />
             )}
           />
-          <div>{errors.username && <span className={style.errorMassage}>{errors.username.message}</span>}</div>
+          <div>
+            {errors.username && (
+              <span className={style.errorMassage}>{errors.username.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -105,7 +111,9 @@ const Profile = () => {
               />
             )}
           />
-          <div>{errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}</div>
+          <div>
+            {errors.email && <span className={style.errorMassage}>{errors.email.message}</span>}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -125,7 +133,11 @@ const Profile = () => {
               />
             )}
           />
-          <div>{errors.password && <span className={style.errorMassage}>{errors.password.message}</span>}</div>
+          <div>
+            {errors.password && (
+              <span className={style.errorMassage}>{errors.password.message}</span>
+            )}
+          </div>
         </div>
 
         <div className={style.field}>
@@ -145,7 +157,9 @@ const Profile = () => {
               />
             )}
           />
-          <div>{errors.image && <span className={style.errorMassage}>{errors.image.message}</span>}</div>
+          <div>
+            {errors.image && <span className={style.errorMassage}>{errors.image.message}</span>}
+          </div>
         </div>
 
         <div>
